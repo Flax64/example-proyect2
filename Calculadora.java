@@ -23,7 +23,19 @@ public class Calculadora
                 case 1:
                     System.out.println("La suma es: " + (a + b));
                     break;
-                
+                case 2:
+                    System.out.println("La resta es: " + (a - b));
+                    break;
+                case 3:
+                    System.out.println("La multiplicación es: " + (a * b));
+                    break;
+                case 4:
+                    if (b != 0) {
+                        System.out.println("La división es: " + (a / b));
+                    } else {
+                        System.out.println("Error: División por cero no permitida.");
+                    }
+                    break;
             }
         } while (opcion != 0);
     }
