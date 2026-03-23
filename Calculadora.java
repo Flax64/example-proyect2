@@ -4,14 +4,14 @@ public class Calculadora
     public static void main (String [] args) 
     {
         Scanner teclado = new Scanner(System.in);
-        Operacion op = new Operacion();
+        int opcion, a, b;
 
         do { 
             System.out.println("0: Salir" +
-                            "\n1: Sumar" +
-                            "\n2: Restar" +
-                            "\n3: Multiplicar" +
-                            "\n4: Dividir"
+                            "1: Sumar" +
+                            "2: Restar" +
+                            "3: Multiplicar" +
+                            "4: Dividir"
             );
             opcion = teclado.nextInt();
             if (opcion == 0) {
@@ -20,7 +20,7 @@ public class Calculadora
             }
             
             System.out.println("Ingrese el primer numero: ");
-            op.setNumero1(teclado.nextInt());
+            a = teclado.nextInt();
             System.out.println("Ingrese el segundo numero: ");
             b = teclado.nextInt();
             switch (opcion) {
