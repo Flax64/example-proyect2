@@ -13,8 +13,8 @@ public class Calculadora
                             "\n3: Multiplicar" +
                             "\n4: Dividir"
             );
-            op.setOperador(teclado.nextInt());
-            if (op.getOperador() == 0) {
+            opcion = teclado.nextInt();
+            if (opcion == 0) {
                 System.out.println("Saliendo de la calculadora. ¡Hasta luego!");
                 break;
             }
@@ -22,9 +22,26 @@ public class Calculadora
             System.out.println("Ingrese el primer numero: ");
             op.setNumero1(teclado.nextInt());
             System.out.println("Ingrese el segundo numero: ");
-            op.setNumero2(teclado.nextInt());
-            
-            System.out.println("El resultado es: " + op.calcular());
-        } while (op.getOperador() != 0);
+            b = teclado.nextInt();
+            switch (opcion) {
+                case 1:
+                    Suma suma = new Suma();
+                    System.out.println("La suma es: " + (suma.sumar(a, b)));
+                    break;
+                case 2:
+                    System.out.println("La resta es: " + (a - b));
+                    break;
+                case 3:
+                    System.out.println("La multiplicación es: " + (a * b));
+                    break;
+                case 4:
+                    if (b != 0) {
+                        System.out.println("La división es: " + (a / b));
+                    } else {
+                        System.out.println("Error: División por cero no permitida.");
+                    }
+                    break;
+            }
+        } while (opcion > 0 && opcion < 5);
     }
 }
