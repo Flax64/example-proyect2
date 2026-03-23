@@ -19,6 +19,7 @@ public class Calculadora
                 break;
             }
             
+            
             System.out.println("Ingrese el primer numero: ");
             op.setNumero1(teclado.nextInt());
             System.out.println("Ingrese el segundo numero: ");
