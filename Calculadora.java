@@ -15,6 +15,16 @@ public class Calculadora
             );
             opcion = teclado.nextInt();
             
+            System.out.println("Ingrese el primer numero: ");
+            a = teclado.nextInt();
+            System.out.println("Ingrese el segundo numero: ");
+            b = teclado.nextInt();
+            switch (opcion) {
+                case 1:
+                    System.out.println("La suma es: " + (a + b));
+                    break;
+                
+            }
         } while (opcion != 0);
     }
 }
