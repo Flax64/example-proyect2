@@ -14,6 +14,10 @@ public class Calculadora
                             "4: Dividir"
             );
             opcion = teclado.nextInt();
+            if (opcion == 0) {
+                System.out.println("Saliendo de la calculadora. ¡Hasta luego!");
+                break;
+            }
             
             System.out.println("Ingrese el primer numero: ");
             a = teclado.nextInt();
@@ -21,7 +25,8 @@ public class Calculadora
             b = teclado.nextInt();
             switch (opcion) {
                 case 1:
-                    System.out.println("La suma es: " + (a + b));
+                    Suma suma = new Suma();
+                    System.out.println("La suma es: " + (suma.sumar(a, b)));
                     break;
                 case 2:
                     System.out.println("La resta es: " + (a - b));
@@ -37,6 +42,6 @@ public class Calculadora
                     }
                     break;
             }
-        } while (opcion != 0);
+        } while (opcion > 0 && opcion < 5);
     }
 }
